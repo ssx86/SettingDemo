@@ -1,0 +1,32 @@
+<%= form_with(model: top_menu, local: true) do |form| %>
+  <% if top_menu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(top_menu.errors.count, "error") %> prohibited this top_menu from being saved:</h2>
+
+      <ul>
+      <% top_menu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :icon %>
+    <%= form.text_field :icon %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

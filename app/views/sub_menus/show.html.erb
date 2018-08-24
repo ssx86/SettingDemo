@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @sub_menu.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sub_menu.description %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @sub_menu.icon %>
+</p>
+
+<p>
+  <strong>Top menu:</strong>
+  <%= @sub_menu.top_menu %>
+</p>
+
+<%= link_to 'Edit', edit_sub_menu_path(@sub_menu) %> |
+<%= link_to 'Back', sub_menus_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @top_menu.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @top_menu.description %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @top_menu.icon %>
+</p>
+
+<%= link_to 'Edit', edit_top_menu_path(@top_menu) %> |
+<%= link_to 'Back', top_menus_path %>
