@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_031357) do
+ActiveRecord::Schema.define(version: 2018_08_24_063410) do
+
+  create_table "sections", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "icon"
+    t.integer "sub_menu_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sub_menu_id"], name: "index_sections_on_sub_menu_id"
+  end
 
   create_table "sub_menus", force: :cascade do |t|
     t.string "title"

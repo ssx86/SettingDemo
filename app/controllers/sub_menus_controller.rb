@@ -4,7 +4,12 @@ class SubMenusController < ApplicationController
   # GET /sub_menus
   # GET /sub_menus.json
   def index
-    @sub_menus = SubMenu.all
+    top_menu_id = params[:top_menu]
+    if top_menu_id
+      @sub_menus = SubMenu.where("top_menu_id = ?", top_menu_id)
+    else
+      @sub_menus = SubMenu.all
+    end
   end
 
   # GET /sub_menus/1
