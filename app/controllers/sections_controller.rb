@@ -4,7 +4,7 @@ class SectionsController < ApplicationController
   # GET /sections
   # GET /sections.json
   def index
-    sub_menu_id = params[:sub_menu]
+    sub_menu_id = params[:id]
     
     if sub_menu_id
       @sections = Section.where("sub_menu_id = ?", sub_menu_id)

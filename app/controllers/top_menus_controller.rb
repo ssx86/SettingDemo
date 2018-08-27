@@ -10,13 +10,8 @@ class TopMenusController < ApplicationController
   def tree
     top_menus = TopMenu.all
     
-    top_menus.each do |menu|
-      menu = menu.to_hash
-      subMenus = helpers.getSubMenus(menu.id)
-      menu[:children] = subMenus
-    end
     respond_to do |format|
-      format.json { render json: top_menus }
+      format.json { render json: top_menus.to_json(include: :sub_menus) }
     end
   end
 
