@@ -27,6 +27,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :mode %>
+    <%= form.select :mode, ['List', 'Record'] %>
+  </div>
+
+  <div class="field">
     <%= form.label :sub_menu_id %>
     <%= form.text_field :sub_menu_id %>
   </div>

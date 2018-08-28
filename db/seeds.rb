@@ -28,15 +28,16 @@ subMenu32 = SubMenu.create(title: "主菜单项目管理", description: "自定�
 # 设置面板
 ############
 
-section111 = Section.create(title: "时区设置", description: "", sub_menu: subMenu11)
-section112 = Section.create(title: "默认语言设置", description: "", sub_menu: subMenu11)
+section111 = Section.create(title: "时区设置", description: "time zone", mode: "Record", sub_menu: subMenu11)
+section112 = Section.create(title: "默认语言设置", description: "default lang", mode: "Record", sub_menu: subMenu11)
+section112 = Section.create(title: "币种设置", description: "currency format", mode: "Record", sub_menu: subMenu11)
 
-section121 = Section.create(title: "定时通知设置", description: "定时通知", sub_menu: subMenu12)
-section131 = Section.create(title: "推送管理", description: "推送管理", sub_menu: subMenu13)
-section141 = Section.create(title: "风险预警", description: "风险预警", sub_menu: subMenu14)
-section151 = Section.create(title: "报表管理", description: "报表管理", sub_menu: subMenu15)
+section121 = Section.create(title: "定时通知设置", description: "定时通知", mode: "List", sub_menu: subMenu12)
+section131 = Section.create(title: "推送管理", description: "推送管理", mode: "List", sub_menu: subMenu13)
+section141 = Section.create(title: "风险预警", description: "风险预警", mode: "List", sub_menu: subMenu14)
+section151 = Section.create(title: "报表管理", description: "报表管理", mode: "List", sub_menu: subMenu15)
 
 
-section211 = Section.create(title: "标准对象管理", description: "标准对象及字段的新建和管理", sub_menu: subMenu21)
-section221 = Section.create(title: "权限设置", description: "权限设置", sub_menu: subMenu22)
-section231 = Section.create(title: "布局设置", description: "页面布局设置", sub_menu: subMenu23)
+section211 = Section.create(title: "标准对象管理", description: "标准对象及字段的新建和管理", mode: "List", sub_menu: subMenu21)
+section221 = Section.create(title: "权限设置", description: "权限设置", mode: "List", sub_menu: subMenu22)
+section231 = Section.create(title: "布局设置", description: "页面布局设置", mode: "List", sub_menu: subMenu23)
